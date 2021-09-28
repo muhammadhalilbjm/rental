@@ -1,0 +1,247 @@
+* { padding: 0; margin: 0; }
+
+
+
+
+
+/* 
+|
+| Navbar
+|
+*/
+nav {
+    background-color: rgb(241, 241, 247);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0 5px black;
+    z-index: 999;
+}
+
+nav .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+nav .nav-brand {
+    width: 30%;
+    line-height: 60px;
+}
+
+nav .nav-list {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    line-height: 60px;
+}
+
+nav .nav-list a {
+    display: inline-block;
+    padding: 0 30px;
+    height: 60px;
+    text-decoration: none;
+    transition: .4s;
+}
+
+nav .nav-list a.home {
+    font-weight: bold;
+}
+
+nav .nav-list a:hover {
+    background-color: rgba(58, 58, 58, .5);
+    color: white;
+}
+
+nav .nav-list a.akun:hover {
+    background-color: rgb(82, 70, 255);
+}
+
+nav .nav-list a.logout:hover {
+    background-color: rgb(238, 29, 29);
+}
+
+
+
+
+/*
+ |
+ | Main
+ |
+*/
+
+
+section.main {
+    margin-bottom: 100px;
+}
+
+section.main .container {
+    width: 95%;
+    margin: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+/*
+ |
+ | Main sidebar
+ |
+*/
+
+.sidebar { 
+    width: 25%; 
+    margin-right: 10px; 
+    position: fixed;
+}
+
+.sidebar h2 { padding-left: 15px; }
+
+.sidebar a {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 0;
+    box-sizing: border-box;
+    padding-left: 15px;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.sidebar a:hover {
+    background-color: rgba(58, 58, 58, .5);
+}
+
+
+
+
+/*
+ |
+ | Main content
+ |
+*/
+
+.content {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    right: 0;
+}
+
+.content .box {
+    width: 45%;
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 25px;
+    box-shadow: 0 0 5px 0 rgba(87, 87, 87, 0.5);
+    margin: 0 20px 20px 0;
+}
+
+.content .belum {
+    width: 100% !important;
+}
+
+.content .box:target { background-color: rgb(242, 242, 248);  }
+
+.content .box:target .container { top: 100px; }
+
+.content .box h2 { margin-bottom: 20px; }
+
+.content .box p { line-height: 1.8; }
+
+.content .aksi form button {
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+    line-height: 30px;
+    border: none;
+    background-color: white;
+}
+
+.content .aksi .pinjam {
+    background-color: rgb(142, 142, 250);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.content .aksi .pinjam:hover {
+    background-color: rgb(63, 87, 224);
+}
+
+
+
+
+
+
+
+/*
+ |
+ | Responsive
+ |
+*/
+
+@media screen and (max-width: 1200px) {
+
+    .content .box { width: 100%; }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    section.main .container {
+        margin: auto;
+        margin-top: 100px;
+    }
+
+    .sidebar { width: 100%; position: static; }
+
+    .content {
+        width: 100%;
+        margin-top: 50px;
+        position: static;
+    }
+
+    .content .box {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+}
+
+@media screen and (max-width: 860px) {
+
+    nav { position: static; }
+
+    nav .nav-brand { width: 100%; }
+
+    nav .nav-list { 
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgb(142, 142, 250);
+        display: flex;
+        justify-content: center;
+        font-size: 15px;
+        line-height: 30px;
+        box-shadow: 0 0 1px 1px rgba(95, 95, 95, .5);
+    }
+
+    nav .nav-list a {
+        height: 30px;
+        padding: 0 10px;
+    }
+
+    .form-group input {
+        width: 70%;
+    }
+
+    footer {
+        height: 70px;
+    }
+}

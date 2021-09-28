@@ -1,0 +1,70 @@
+
+/* 
+|
+| Memberi gaya pada file profile dan edit profile
+|
+*/
+
+.container-profile {
+    width: 80%;
+    margin: 100px auto;
+}
+
+.container-profile .form-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-profile label {
+    display: inline-block;
+    font-size: 1.3rem;
+    margin-bottom: 50px;
+    width: 20%;
+}
+
+.container-profile input {
+    height: 30px;
+    box-shadow: 0 0 0 3px rgb(148, 245, 92);
+    border: 1px solid black;
+    padding-left: 10px;
+    font-size: 14px;
+    width: 75%;
+}
+
+.container-profile input#simpan {
+    width: 76%;
+    background-color: rgb(77, 77, 248);
+    color: white;
+}
+
+
+
+
+
+/* 
+|
+| Responsive
+|
+*/
+
+@media screen and (max-width: 660px) {
+    
+    .container-profile {
+        width: 90%;
+    }
+
+    .container-profile label {
+        width: 95%;
+        margin: 10px auto;
+    }
+    
+    .container-profile input {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .container-profile input#simpan {
+        width: 102.7%;
+    }
+
+}
